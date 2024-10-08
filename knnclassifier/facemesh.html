@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>FaceMesh Classifier</title>
+    <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <button class="addData">Step 1: Add Data</button>
+        <button class="classify">Step 2: Classify</button>
+        <button class="saveModel">Step 4: Save the model</button>
+        <input type="text" class="label" placeholder="Label">
+    </nav>
+
+    <div class="camera">
+        <canvas class="canvas canvas--facemesh" width="640" height="480"></canvas>
+        <canvas class="canvas canvas--canvas" width="640" height="480"></canvas>
+        <video class="video" width="640" height="480" autoplay></video>
+    </div>
+    <p class="status">Loading...</p>
+    <script src="../js/faceMeshClassifier.js"></script>
+</body>
+
+</html>

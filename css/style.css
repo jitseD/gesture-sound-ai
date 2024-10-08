@@ -1,0 +1,199 @@
+:root {
+    --c-black: #333549;
+    --c-beige: #FEDBBB;
+    --c-pink: #FF5F65;
+    --c-yellow: #FFA32A;
+    --c-blue: #4C66F0;
+    --c-green: #1B6457;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100vh;
+
+    color: var(--c-black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-black);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, max-content);
+    gap: 5rem;
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: #FEDBBB;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.camera {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    place-items: center;
+}
+
+.canvas,
+.video,
+.camera__loader {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+.camera__loader {
+    z-index: 20;
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+.canvas,
+.video {
+    transform: scaleX(-1);
+    border-radius: 20px;
+}
+
+
+.canvas {
+    z-index: 10;
+    border: rgba(51, 53, 73, 0.2) solid 0.1rem;
+}
+
+.video {
+    z-index: -10;
+    opacity: 10%;
+}
+
+.sounds {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.sound__visualizer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.sound__color {
+    width: 1rem;
+    height: 1rem;
+}
+
+.sound__play,
+.sound__pause, .instruction__toggle {
+    fill: var(--c-black);
+    stroke: var(--c-black);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.info {
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    margin-right: -14rem;
+}
+
+.body--instructions {
+    max-width: 90%;
+}
+
+.body--instructions .info {
+    margin-right: -0.5rem;
+
+}
+
+.instructions {
+    grid-column: 2;
+    width: 25rem;
+    align-self: flex-start;
+    padding-top: 11rem;
+    display: grid;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.instruction__block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    line-height: 1.3rem;
+    position: relative;
+}
+
+.instruction__title {
+    font-size: 1.2rem;
+}
+
+.instruction__title,
+strong {
+    font-weight: 900;
+}
+
+.list__item {
+    list-style: circle;
+    margin-left: 0.8rem;
+}
+
+.list__item--title {
+    list-style: none;
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+}
+
+.list__item--title:first-child {
+    margin-top: 0rem;
+}
+
+.instruction__toggle{
+    position: absolute;
+    top: 0.4rem;
+    left: -0.9rem;
+}
+
+.instruction__toggle--active{
+    rotate: 90deg;
+}

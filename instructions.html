@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <title>Ai Music Player</title>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.5.44/Tone.js"></script>
+</head>
+
+<body class="body--instructions">
+    <img class="instruction__image" src="./assets/img/instructions.png" alt="instructions" width="800" height="656">
+    <div class="instructions">
+        <article class="instruction__block">
+            <h1 class="instruction__title">play sounds</h1>
+            <p class="instruction__text">
+                do one of the hand signs with your left hand in the corresponding are to hear that sound
+            </p>
+            <ul class="instruction__list">
+                <li class="list__item">
+                    <strong>beat:</strong> one finger up like you're bouncing with the beat
+                </li>
+                <li class="list__item">
+                    <strong>beatbox:</strong> put your hand in front of your mouth like you are beatboxing
+                </li>
+                <li class="list__item">
+                    <strong>bubbles:</strong> put all you fingers together like a bubble that is going to pop
+                </li>
+                <li class="list__item">
+                    <strong>chime:</strong> show your fingers like you are playing the piano
+                </li>
+                <li class="list__item">
+                    <strong>comic:</strong> make your hand walk on the bottom of the screen like in a comic
+                </li>
+                <li class="list__item">
+                    <strong>drop:</strong> point your fingers down like you are dropping something
+                </li>
+                <li class="list__item">
+                    <strong>heartbeat:</strong> place your hand on you hart
+                </li>
+                <li class="list__item">
+                    <strong>knocking:</strong> show you fist like you are knocking on a door
+                </li>
+            </ul>
+            <svg class="instruction__toggle instruction__toggle--active" width="8" height="9" viewBox="0 0 8 9">
+                <path d="M0.999999 8V1L7 4.5L0.999999 8Z" />
+            </svg>
+
+        </article>
+        <article class="instruction__block">
+            <h1 class="instruction__title">sound boxes and actions</h1>
+            <p class="instruction__text hide">
+                you can put certain sounds in a sound box play multiples sounds simultaneously, use your right hand for
+                these commands
+            </p>
+            <ul class="instruction__list hide">
+                <li class="list__item list__item--title"><strong>sound boxes</strong></li>
+                <li class="list__item"><strong>box[0]:</strong> make a 0 or a fist with your right hand</li>
+                <li class="list__item"><strong>box[1]:</strong> put one index finger up</li>
+                <li class="list__item"><strong>box[2]:</strong> index and middle finger up</li>
+                <li class="list__item"><strong>box[3]:</strong> index, middle and ring finger or thumb</li>
+                <li class="list__item"><strong>box[4]:</strong> index, middle, ring and pinky up</li>
+                <li class="list__item list__item--title"><strong>actions</strong></li>
+                <li class="list__item"><strong>pause:</strong> show your open palm</li>
+                <li class="list__item"><strong>play:</strong> show you backhand</li>
+            </ul>
+            <svg class="instruction__toggle" width="8" height="9" viewBox="0 0 8 9">
+                <path d="M0.999999 8V1L7 4.5L0.999999 8Z" />
+            </svg>
+
+        </article>
+        <article class="instruction__block">
+            <h1 class="instruction__title">head gestures</h1>
+            <p class="instruction__text hide">
+                with your head, you can control the volume, speed and looping, you need to hold the positions until you
+                are satisfied with the settings (except for looping), when you don't want to do anything, make sure your
+                head stays in the center
+            </p>
+            <ul class="instruction__list hide">
+                <li class="list__item list__item--title">
+                    <strong>volume</strong>
+                </li>
+                <li class="list__item">
+                    <strong>higher:</strong> open your mouth as wide as possible
+                </li>
+                <li class="list__item">
+                    <strong>lower:</strong> frowning with your whole face and eyes closed
+                </li>
+                <li class="list__item list__item--title">
+                    <strong>speed</strong>
+                </li>
+                <li class="list__item">
+                    <strong>higher:</strong> look to the right, or move your face all the way to the right side
+                </li>
+                <li class="list__item">
+                    <strong>lower:</strong> look to the left, or move your face all the way to theleft side
+                </li>
+                <li class="list__item list__item--title">
+                    <strong>looping</strong>
+                </li>
+                <li class="list__item">
+                    <strong>on:</strong> tilt your head upwards
+                </li>
+                <li class="list__item">
+                    <strong>off:</strong> tilt your head downwards
+                </li>
+            </ul>
+            <svg class="instruction__toggle" width="8" height="9" viewBox="0 0 8 9">
+                <path d="M0.999999 8V1L7 4.5L0.999999 8Z" />
+            </svg>
+
+        </article>
+    </div>
+    <div class="info">
+        <a href="./index.html">let's get started</a>
+    </div>
+    <script src="./js/instructions.js"></script>
+</body>
+
+</html>
